@@ -6,7 +6,7 @@
   },
   "author": "Lars-Magnus Skog <ralphtheninja@riseup.net>",
   "dependencies": {
-    "deltachat-node": "^0.23.1",
+    "deltachat-node": "ralphtheninja/deltachat-node#ssl-test",
     "rimraf": "^2.6.2"
   }
 }
