@@ -2,6 +2,9 @@ sudo: required
 
 language: node_js
 
+node_js:
+  - 8
+
 os:
   - osx
   - linux
@@ -23,11 +26,11 @@ before_install:
   - ./travis-before-install
   - openssl version
 
-node_js:
-  - 8
-
 install:
   - npm install --verbose
+
+before_script:
+  - ldd node_modules/deltachat-node/build/Release/deltachat.node
 
 script:
   - npm test
