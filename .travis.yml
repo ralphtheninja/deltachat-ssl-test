@@ -29,8 +29,8 @@ install:
   - npm install --verbose
 
 before_script:
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; ldd node_modules/deltachat-node/build/Release/deltachat.node; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; otool -L node_modules/deltachat-node/build/Release/deltachat.node; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ldd node_modules/deltachat-node/build/Release/deltachat.node; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then otool -L node_modules/deltachat-node/build/Release/deltachat.node; fi
 
 script:
   - npm test
